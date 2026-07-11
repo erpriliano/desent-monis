@@ -54,3 +54,18 @@ npm run lint
 npm run typecheck
 npm run build
 ```
+
+## Future Improvements
+
+With more time, the next improvements would be:
+
+- Add shareable setup URLs by serializing the selected preset, products, location, and rental cycle into query params.
+- Add an availability layer for location and delivery date, including unavailable states and suggested substitutes.
+- Improve touch interactions further with a tap-to-select then tap-to-place flow for users who prefer not to drag on tablets.
+- Split checkout preview into a dedicated route or modal component with form validation for delivery details.
+- Add lightweight unit tests for pricing, bundle savings, zone validation, and preset application logic.
+- Add Playwright smoke tests for core flows: select preset, drag item, reject invalid drop, clear accessories, and open checkout.
+- Replace mock product glyphs with optimized local product thumbnails using `next/image` while keeping consistent dimensions.
+- Persist the current setup in local storage so refreshing the page does not reset the workspace.
+- Add analytics-friendly event boundaries for preset selection, catalog add, drag/drop placement, and checkout intent.
+- Add loading and empty states around future real catalog or availability APIs.
