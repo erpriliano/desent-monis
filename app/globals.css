@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f7f8f6;
+  color: #171717;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.workspace-grid {
+  background-image:
+    linear-gradient(rgba(23, 23, 23, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 23, 23, 0.035) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.drop-pulse {
+  animation: dropPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes dropPulse {
+  0%,
+  100% {
+    border-color: rgba(36, 194, 122, 0.35);
+  }
+  50% {
+    border-color: rgba(36, 194, 122, 0.9);
+  }
+}
