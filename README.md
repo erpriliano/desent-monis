@@ -69,3 +69,21 @@ With more time, the next improvements would be:
 - Persist the current setup in local storage so refreshing the page does not reset the workspace.
 - Add analytics-friendly event boundaries for preset selection, catalog add, drag/drop placement, and checkout intent.
 - Add loading and empty states around future real catalog or availability APIs.
+
+## Deployment Workflow
+
+Recommended branch flow:
+
+- `main`: production branch. Merges into this branch should trigger the production Vercel deployment.
+- `develop`: integration branch for active work.
+- Feature branches: branch off `develop`, then open PRs back into `develop`.
+- Release PRs: open a PR from `develop` into `main` when the app is ready for production.
+
+Recommended Vercel settings:
+
+- Import the GitHub repository into Vercel.
+- Set the Production Branch to `main`.
+- Keep automatic deployments enabled.
+- Use Vercel Preview Deployments for pull requests and non-production branches.
+
+With this setup, merging a PR into `main` automatically deploys the latest production build.
